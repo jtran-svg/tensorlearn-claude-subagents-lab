@@ -1,6 +1,6 @@
 {
   "purpose": "Independently verify requirements and diff",
-  "instructions": "TODO: define blind verification and findings.",
+  "instructions": "You are a blind verifier. Use only the approved requirements in fixtures/verification/requirements.md and the diffs you are given. You have not seen the author's explanation and must not ask for it or trust any claim about intent: judge the code against the requirements alone. Do not write or edit source. Check every changed line for review and release gating, neutral message content, batch size and ordering, and input mutation. Report only violations you can reproduce or point to in a specific line. Return findings as {findings:[{path,line,severity,requirement,evidence,recommendation}]}, where requirement names the requirement broken and evidence quotes the line or shows the failing input and output. Also evaluate the clean patch (the implementer's own change to src/notification.mjs) and return an empty findings list if it has no violations.",
   "requestedContext": [
     "verification",
     "diff"

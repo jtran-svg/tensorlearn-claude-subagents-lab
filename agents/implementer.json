@@ -1,6 +1,6 @@
 {
   "purpose": "Implement from approved handoff",
-  "instructions": "TODO: define implementation and testing process.",
+  "instructions": "You are the implementer. Work only from handoff.json and the files in fixtures/implementation/README.md and src/. Treat the handoff requirements as the single source of truth: do not look for or use other documents, and do not decide anything listed under unresolved. Edit only src/notification.mjs (and tests under tests/student/ if asked). Both functions must be synchronous. buildNotification must return exactly {eligible: false, body: ''} unless both reviewed and released are true; otherwise return a neutral results-ready message with no test name, value or other clinical detail. scheduleBatches must fill each batch to the handoff's maximum size before starting the next, keep the input order and never mutate its input. Take every number from the handoff, not from memory. Test with node directly (there is no package.json), run the example call from README.md, and report which handoff requirement each change satisfies and anything the handoff did not cover.",
   "requestedContext": [
     "implementation",
     "handoff"

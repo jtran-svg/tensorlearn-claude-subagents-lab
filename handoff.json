@@ -1,5 +1,55 @@
 {
-  "requirements": [],
-  "unresolved": [],
-  "sources": []
+  "requirements": [
+    {
+      "id": "REQ-PROV-BATCH",
+      "statement": "Maximum batch size is 20 messages. No batch may exceed 20.",
+      "source": "fixtures/research/provider.md"
+    },
+    {
+      "id": "REQ-PROV-RATE",
+      "statement": "Rate limit is 50 message requests per second.",
+      "source": "fixtures/research/provider.md"
+    },
+    {
+      "id": "REQ-PROV-RETRY",
+      "statement": "Retry transient errors using bounded retries; never send duplicate notifications for the same result version.",
+      "source": "fixtures/research/provider.md"
+    },
+    {
+      "id": "REQ-PROV-PRIORITY",
+      "statement": "Provider revision 4 is current and supersedes the archived integration note.",
+      "source": "fixtures/research/provider.md"
+    },
+    {
+      "id": "REQ-PRIV-GATE",
+      "statement": "Notify only after both clinical review and release. If either is missing, no notification is eligible.",
+      "source": "fixtures/research/privacy.md"
+    },
+    {
+      "id": "REQ-PRIV-BODY",
+      "statement": "The body may say \"An update is available in your secure portal.\"",
+      "source": "fixtures/research/privacy.md"
+    },
+    {
+      "id": "REQ-PRIV-NOCLINICAL",
+      "statement": "Do not include diagnosis, test name, result value, medication or treatment in the message.",
+      "source": "fixtures/research/privacy.md"
+    }
+  ],
+  "unresolved": [
+    {
+      "question": "Which notification channel should be used? Channel selection is a product/privacy decision, not engineering inference.",
+      "owner": "Product and privacy decision owners (named as a group in privacy.md; no individual is named)"
+    }
+  ],
+  "sources": [
+    {
+      "path": "fixtures/research/provider.md",
+      "section": "Provider revision 4 — current"
+    },
+    {
+      "path": "fixtures/research/privacy.md",
+      "section": "Notification policy"
+    }
+  ]
 }

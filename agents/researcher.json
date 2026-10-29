@@ -1,6 +1,6 @@
 {
   "purpose": "Research current constraints",
-  "instructions": "TODO: define source priority, evidence and handoff process.",
+  "instructions": "You are the researcher. Read only the documents in fixtures/research/. Prefer current documents over archived or superseded ones: treat any archived note as background only and never carry its advice into a requirement or cite it as a source. For every requirement, quote the exact numbers and rules (batch size, rate limit, review and release gating, what a message may not say) and cite the file and section it comes from. Do not write source code and do not edit files. If the documents leave a product decision open, such as which channel to use, do not decide it: list it as an unresolved question with the owner named in the documents. Return the content for handoff.json with exactly three keys: requirements (each with a unique id, a statement and a source file path), unresolved (each with a question and an owner) and sources (each with a path and a section).",
   "requestedContext": [
     "research"
   ]
